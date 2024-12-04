@@ -20,7 +20,7 @@ Ensure the device is enrolled with "Corporate-owned, fully managed user device",
 
 In "APPS" -> "Android" click teh "+ Add", and select the "App Type" "Managed Google Play app" in the Google Play screen search for "Netsweeper" and select the "Netsweeper Client Filter" app
 
-![netsweeper google Play](https://github.com/wavenet-education/netsweeper/blob/main/media/media/netsweeper-android-cf.jpg)
+![netsweeper google Play](https://raw.githubusercontent.com/Wavenet-Education/netsweeper/main/media/media/netsweeper-android-cf.jpg)
 
 Once this appears in the App list, select the App and assign the required groups. Once this is done the App should start pushing out to the groups selected. However we now need to create an "App Configuration Policy" to push the settings out to the device
 
