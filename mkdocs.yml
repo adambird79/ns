@@ -1,0 +1,31 @@
+site_name: Netsweeper Docs
+site_description: Netsweeper guides
+theme:
+  name: material
+  palette:
+  # Dark Mode
+  - scheme: slate
+    toggle:
+      icon: material/weather-sunny
+      name: Dark Mode
+    primary: green
+    accent: deep purple
+
+  # Light Mode
+  - scheme: default
+    toggle:
+      icon: material/weather-night
+      name: Light Mode
+    primary: blue
+    accent: green
+plugins:
+  - search
+  - callouts
+markdown_extensions:
+- attr_list
+- nl2br
+- admonition
+- pymdownx.details
+- pymdownx.superfences
+extra_css:
+  - stylesheets/extra.css
