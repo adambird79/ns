@@ -417,6 +417,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#windows-active-directory-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows Active Directory Sync
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Windows Active Directory Sync">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#netsweeper-service-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      Netsweeper Service Account
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-filtering-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create Filtering Groups
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploying-ssl-certificate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deploying SSL Certificate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#wagent-build-mst" class="md-nav__link">
     <span class="md-ellipsis">
       wagent build MST
@@ -424,8 +461,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#clinet-filter-build-mst" class="md-nav__link">
     <span class="md-ellipsis">
       Clinet Filter build MST
@@ -433,8 +470,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#windows-group-policy" class="md-nav__link">
     <span class="md-ellipsis">
       Windows Group Policy
@@ -466,13 +503,18 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#windows-manual-installation" class="md-nav__link">
     <span class="md-ellipsis">
       Windows Manual Installation
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -496,6 +538,26 @@
   
   <span class="md-ellipsis">
     Windows Intune
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows-standalone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Windows Standalone
   </span>
   
 
@@ -531,6 +593,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#windows-active-directory-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows Active Directory Sync
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Windows Active Directory Sync">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#netsweeper-service-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      Netsweeper Service Account
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-filtering-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create Filtering Groups
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploying-ssl-certificate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deploying SSL Certificate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#wagent-build-mst" class="md-nav__link">
     <span class="md-ellipsis">
       wagent build MST
@@ -538,8 +637,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#clinet-filter-build-mst" class="md-nav__link">
     <span class="md-ellipsis">
       Clinet Filter build MST
@@ -547,8 +646,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#windows-group-policy" class="md-nav__link">
     <span class="md-ellipsis">
       Windows Group Policy
@@ -580,13 +679,18 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#windows-manual-installation" class="md-nav__link">
     <span class="md-ellipsis">
       Windows Manual Installation
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -606,6 +710,46 @@
 
 
 <h1 id="windows-active-directory-setup">Windows Active Directory Setup</h1>
+<h2 id="windows-active-directory-sync">Windows Active Directory Sync</h2>
+<h3 id="netsweeper-service-account">Netsweeper Service Account</h3>
+<p>Create an account for the Netsweeper user, this user account only need to be a member of “Domain Users” and should NOT be a “Domain Administrator”</p>
+<p>First check the “Advanced Features” is enabled under the View menu in Active Directory.</p>
+<p><img alt="Service Account1" src="../media/windows-ad/win-sa1.png" /></p>
+<p>If needed create a new Organisational Unit for this user otherwise create this user account with other service accounts.</p>
+<p>Right click on the white space in the folder and select “New” -&gt; “User”</p>
+<p><img alt="service account2" src="../media/windows-ad/win-sa2.png" /></p>
+<p>Fill out the form naming the account to fit in with the schools’ naming conventions. Click “Next” when done.</p>
+<p><img alt="sevice account3" src="../media/windows-ad/win-sa3.png" /></p>
+<p>Set a complex password and tick the “Password never expires” box, then click “Next”</p>
+<p><img alt="service account4" src="../media/windows-ad/win-sa4.png" /></p>
+<p>On the next screen, click “Finish”</p>
+<p><img alt="service accout5" src="../media/windows-ad/win-sa5.png" /></p>
+<p>Once we have created the user either double click on the user account or right click and select “Properties”</p>
+<p>When the screen loads you should the “Attribute Editor” tab, if not go back and make sure you enabled “Advanced Features” under the view menu. Select the “Attribute Editor” tab.</p>
+<p><img alt="service account6" src="../media/windows-ad/win-sa6.png" /></p>
+<p>In the “Attribute Editor" tab scroll down and find the entry “distinguishedName” and click the “View” button. The value will look something like this: “CN=svc netsweeper,OU=Netsweeper,DC=domain,DC=local” make a note of this value Netsweeper requires this for the LDAP Sync.</p>
+<p><img alt="service account7" src="../media/windows-ad/win-sa7.png" /></p>
+<h3 id="create-filtering-groups">Create Filtering Groups</h3>
+<p>To create the filtering groups go to the “Organisational Unit” where you store Active Directory groups or create a new location. Right click in the white space on the right and select “New” -&gt; “Group”</p>
+<p><img alt="win fg1" src="../media/windows-ad/win-fg1.png" /></p>
+<p>The Group name should be set here with the prefix nsw_<br />
+So in the example below we have setup the filtering group for staff with the name nsw_staff</p>
+<p><img alt="win fg2" src="../media/windows-ad/win-fg2.png" /></p>
+<p>Once the groups have been created add the required users to the group, groups can be nested in here but be careful making sure a user doesn’t end up being a member of multiple filtering groups.</p>
+<h3 id="deploying-ssl-certificate">Deploying SSL Certificate</h3>
+<p>Before anything we need to grab a copy of the SSL certificate for Netsweeper this can be downloaded from:</p>
+<p><a href="https://wavenetcloud.netsweeper.com/webadmin/tools/download_proxy_cert.php">SSL Proxy Certificate</a></p>
+<p>Create a new Group Policy Object named something like "SSL"</p>
+<p><img alt="win ssl1" src="../media/windows-ad/win-ssl1.png" /></p>
+<p>Right click and "Edit" the new policy</p>
+<p><img alt="win ssl2" src="../media/windows-ad/win-ssl2.png" /></p>
+<p><img alt="winssl3" src="../media/windows-ad/win-ssl3.png" /></p>
+<p><img alt="winssl4" src="../media/windows-ad/win-ssl4.png" /></p>
+<p><img alt="winssl5" src="../media/windows-ad/win-ssl5.png" /></p>
+<p><img alt="winssl6" src="../media/windows-ad/win-ssl6.png" /></p>
+<p><img alt="winssl7" src="../media/windows-ad/win-ssl7.png" /></p>
+<p><img alt="winssl8" src="../media/windows-ad/win-ssl8.png" /></p>
+<p><img alt="winssl9" src="../media/windows-ad/win-ssl9.png" /></p>
 <h3 id="wagent-build-mst">wagent build MST</h3>
 <h3 id="clinet-filter-build-mst">Clinet Filter build MST</h3>
 <h3 id="windows-group-policy">Windows Group Policy</h3>
