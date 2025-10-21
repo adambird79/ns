@@ -33,7 +33,7 @@ To setup Microsoft Endpoint Manager for you will need to have the client filter 
 
 Login to: [Intune Admin](https://intune.microsoft.com){:target="_blank"} 
 
-Then go to “Apps” -> “iOS/iPadOS”
+Then go to “Apps” -> “IOS/iPadOS”
 
 ![Apps](media/apple/apple-intune1.png)
 
