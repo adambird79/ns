@@ -435,7 +435,12 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#create-filtering-groups" class="md-nav__link">
     <span class="md-ellipsis">
       Create Filtering Groups
@@ -443,6 +448,16 @@
   </a>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#windows-group-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows Group Policy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Windows Group Policy">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#deploying-ssl-certificate" class="md-nav__link">
@@ -452,34 +467,6 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#wagent-build-mst" class="md-nav__link">
-    <span class="md-ellipsis">
-      wagent build MST
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#clinet-filter-build-mst" class="md-nav__link">
-    <span class="md-ellipsis">
-      Clinet Filter build MST
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#windows-group-policy" class="md-nav__link">
-    <span class="md-ellipsis">
-      Windows Group Policy
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Windows Group Policy">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#deploy-the-wagent" class="md-nav__link">
@@ -494,20 +481,6 @@
   <a href="#deploy-the-client-filter" class="md-nav__link">
     <span class="md-ellipsis">
       Deploy the Client Filter
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#windows-manual-installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Windows Manual Installation
     </span>
   </a>
   
@@ -538,6 +511,26 @@
   
   <span class="md-ellipsis">
     Windows Intune
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows-build-clients/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Windows Build Clients
   </span>
   
 
@@ -611,7 +604,12 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#create-filtering-groups" class="md-nav__link">
     <span class="md-ellipsis">
       Create Filtering Groups
@@ -619,6 +617,16 @@
   </a>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#windows-group-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows Group Policy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Windows Group Policy">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#deploying-ssl-certificate" class="md-nav__link">
@@ -628,34 +636,6 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#wagent-build-mst" class="md-nav__link">
-    <span class="md-ellipsis">
-      wagent build MST
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#clinet-filter-build-mst" class="md-nav__link">
-    <span class="md-ellipsis">
-      Clinet Filter build MST
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#windows-group-policy" class="md-nav__link">
-    <span class="md-ellipsis">
-      Windows Group Policy
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Windows Group Policy">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#deploy-the-wagent" class="md-nav__link">
@@ -670,20 +650,6 @@
   <a href="#deploy-the-client-filter" class="md-nav__link">
     <span class="md-ellipsis">
       Deploy the Client Filter
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#windows-manual-installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Windows Manual Installation
     </span>
   </a>
   
@@ -729,13 +695,14 @@
 <p><img alt="service account6" src="../media/windows-ad/win-sa6.png" /></p>
 <p>In the “Attribute Editor" tab scroll down and find the entry “distinguishedName” and click the “View” button. The value will look something like this: “CN=svc netsweeper,OU=Netsweeper,DC=domain,DC=local” make a note of this value Netsweeper requires this for the LDAP Sync.</p>
 <p><img alt="service account7" src="../media/windows-ad/win-sa7.png" /></p>
-<h3 id="create-filtering-groups">Create Filtering Groups</h3>
+<h2 id="create-filtering-groups">Create Filtering Groups</h2>
 <p>To create the filtering groups go to the “Organisational Unit” where you store Active Directory groups or create a new location. Right click in the white space on the right and select “New” -&gt; “Group”</p>
 <p><img alt="win fg1" src="../media/windows-ad/win-fg1.png" /></p>
 <p>The Group name should be set here with the prefix nsw_<br />
 So in the example below we have setup the filtering group for staff with the name nsw_staff</p>
 <p><img alt="win fg2" src="../media/windows-ad/win-fg2.png" /></p>
 <p>Once the groups have been created add the required users to the group, groups can be nested in here but be careful making sure a user doesn’t end up being a member of multiple filtering groups.</p>
+<h2 id="windows-group-policy">Windows Group Policy</h2>
 <h3 id="deploying-ssl-certificate">Deploying SSL Certificate</h3>
 <p>Before anything we need to grab a copy of the SSL certificate for Netsweeper this can be downloaded from:</p>
 <p><a href="https://wavenetcloud.netsweeper.com/webadmin/tools/download_proxy_cert.php">SSL Proxy Certificate</a></p>
@@ -750,12 +717,47 @@ So in the example below we have setup the filtering group for staff with the nam
 <p><img alt="winssl7" src="../media/windows-ad/win-ssl7.png" /></p>
 <p><img alt="winssl8" src="../media/windows-ad/win-ssl8.png" /></p>
 <p><img alt="winssl9" src="../media/windows-ad/win-ssl9.png" /></p>
-<h3 id="wagent-build-mst">wagent build MST</h3>
-<h3 id="clinet-filter-build-mst">Clinet Filter build MST</h3>
-<h3 id="windows-group-policy">Windows Group Policy</h3>
-<h4 id="deploy-the-wagent">Deploy the Wagent</h4>
-<h4 id="deploy-the-client-filter">Deploy the Client Filter</h4>
-<h3 id="windows-manual-installation">Windows Manual Installation</h3>
+<h3 id="deploy-the-wagent">Deploy the Wagent</h3>
+<p>The WAgent can be installed prior to going live with the filtering system. <strong>Unless we are doing a Netsweeper to Netsweeper migration</strong></p>
+<p>In group policy management create a new group policy, setting the name to fit in with the schools group policy naming conventions.</p>
+<p><img alt="dep-wag1" src="../media/windows-ad/dep-wag1.png" /></p>
+<p>In this example we call the group policy “Software Deployment”</p>
+<p><img alt="dep-wag2" src="../media/windows-ad/dep-wag2.png" /></p>
+<p>Once created location the group policy and right click on this and select “Edit”</p>
+<p><img alt="dep-wag3" src="../media/windows-ad/dep-wag3.png" /></p>
+<p>Once this opens browse to “Computer Configuration” -&gt; “Policies” -&gt; “Software Settings” -&gt; “Software installation”!</p>
+<p><img alt="dep-wag4" src="../media/windows-ad/dep-wag4.png" /></p>
+<p>Right click on the white space and select “New” -&gt; “Package”</p>
+<p><img alt="dep-wag5" src="../media/windows-ad/dep-wag5.png" /></p>
+<p>Here browse to the UNC path of the share where the software is stored. In the below example we browse to the location \DC01\Software and select the MSI package named “Netsweeper Workstation Agent - 4.40.54.54-windows.msi” and click “Open”</p>
+<p><img alt="dep-wag6" src="../media/windows-ad/dep-wag6.png" /></p>
+<p><img alt="dep-wag7" src="../media/windows-ad/dep-wag7.png" /></p>
+<p><img alt="dep-wag8" src="../media/windows-ad/dep-wag8.png" /></p>
+<p><img alt="dep-wag9" src="../media/windows-ad/dep-wag9.png" /></p>
+<p><img alt="dep-wag10" src="../media/windows-ad/dep-wag10.png" /></p>
+<h3 id="deploy-the-client-filter">Deploy the Client Filter</h3>
+<p>nMonitor is the software required for the filtering with onGuard, this should be deployed when ready to “Go Live”</p>
+<p>In group policy management create a new group policy, setting the name to fit in with the schools group policy naming conventions.</p>
+<p><img alt="dep-wag1" src="../media/windows-ad/dep-wag1.png" /></p>
+<p>In this example we call the group policy “Software Deployment”</p>
+<p><img alt="dep-wag2" src="../media/windows-ad/dep-wag2.png" /></p>
+<p>Once created location the group policy and right click on this and select “Edit”</p>
+<p><img alt="dep-wag3" src="../media/windows-ad/dep-wag3.png" /></p>
+<p>Once this opens browse to “Computer Configuration” -&gt; “Policies” -&gt; “Software Settings” -&gt; “Software installation”!</p>
+<p><img alt="dep-wag4" src="../media/windows-ad/dep-wag4.png" /></p>
+<p>Right click on the white space and select “New” -&gt; “Package”</p>
+<p><img alt="dep-wag5" src="../media/windows-ad/dep-wag5.png" /></p>
+<p>Here browse to the UNC path of the share where the software is stored. In the below example we browse to the location \DC01\Software and select the MSI package named “nMonitor Client – 11.60.54.1 win64.msi” and click “Open”</p>
+<p><img alt="dep-cf1" src="../media/windows-ad/dep-cf1.png" /></p>
+<p>Once this has been selected, and clicked “Open” the next screen we need to change the default option from “Assigned” to “Advanced”</p>
+<p><img alt="dep-wag7" src="../media/windows-ad/dep-wag7.png" /></p>
+<p>When the option has been set to “Advanced” click Ok. Then select the tab “Modifications” on the screen that loads.</p>
+<p><img alt="dep-cf2" src="../media/windows-ad/dep-cf2.png" /></p>
+<p>On the “Modifications” screen click “Add” and you should see the MST file, assuming you have stored this in the same location as the MSI installation file.</p>
+<p><img alt="dep-cf3" src="../media/windows-ad/dep-cf3.png" /></p>
+<p>Once the MST is selected, click Ok.</p>
+<p>On the next screen, click OK again and this is now configured.</p>
+<p><img alt="dep-cf4" src="../media/windows-ad/dep-cf4.png" /></p>
 
 
 

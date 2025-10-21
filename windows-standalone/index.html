@@ -11,7 +11,7 @@
       
       
       
-        <link rel="prev" href="../Windows-Intune/">
+        <link rel="prev" href="../windows-build-clients/">
       
       
       
@@ -406,6 +406,26 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows-build-clients/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Windows Build Clients
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -559,7 +579,7 @@
 
 <h1 id="windows-standalone">Windows Standalone</h1>
 <h2 id="manual-ssl-installation">Manual SSL Installation</h2>
-<p>Download the SSL Certificat: </p>
+<p>Download the SSL Certificate: </p>
 <p><a href="https://wavenetcloud.netsweeper.com/webadmin/tools/download_proxy_cert.php">SSL Proxy Certificate</a></p>
 <p><img alt="win-sa1" src="../media/windows-sa/win-sa1.png" /></p>
 <p><img alt="win-sa2" src="../media/windows-sa/win-sa2.png" /></p>
@@ -568,7 +588,17 @@
 <p><img alt="win-sa5" src="../media/windows-sa/win-sa5.png" /></p>
 <p><img alt="win-sa6" src="../media/windows-sa/win-sa6.png" /></p>
 <h2 id="manaul-wagent-installation">Manaul wagent Installation</h2>
+<p>open a command prompt with Administrator privileges, this must be CMD and not Powershell.</p>
+<p>The command we need to run to install the software is (change the TRANSFORMS=… part to match the MST for the school):</p>
+<div class="highlight"><pre><span></span><code>msiexec /i &quot;wagent.msi&quot; /qn TRANSFORMS=&quot;123-4567 wagent transform filemst.mst&quot;
+</code></pre></div>
 <h2 id="manual-client-filter-installation">Manual Client Filter Installation</h2>
+<p>open a command prompt with Administrator privileges, this must be CMD and not Powershell.</p>
+<p>The command we need to run to install the software is (change the TRANSFORMS=… part to match the MST for the school):</p>
+<div class="highlight"><pre><span></span><code>msiexec /i &quot;nMonitor Client.msi&quot; /qn TRANSFORMS=&quot;123-4567 nMonitor transform filemst.mst&quot;
+</code></pre></div>
+<p>Once this is installed you will see the below icon in the system tray</p>
+<p><img alt="win-cficon" src="../media/windows-sa/win-cficon.png" /></p>
 
 
 
