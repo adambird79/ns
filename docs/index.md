@@ -12,7 +12,7 @@ hide:
 
 * Is a Directory Sync required? 
     * Is it an Intune / EntraID deployment - Create [EntraID Sync](Netsweeper-webadmin.md#entraid-sync-microsoft-graph)
-    * Does the customer have Radius
+    * Does the customer have Radius (If RADIUS is used we will need to work with Netsweeper support to setup)
 * If no additional complexity create groups in [Active Directory](Windows-AD.md#create-filtering-groups) and create matching groups in [Netsweeper](Netsweeper-webadmin.md#groups-policies)
 * Add [Client IP Range(s)](Netsweeper-webadmin.md#clients)
 * Create [wagent config](Netsweeper-webadmin.md#wagent)

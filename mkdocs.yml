@@ -21,6 +21,8 @@ theme:
 plugins:
   - search
   - callouts
+  - awesome-nav:
+      filename: .nav.yml
 markdown_extensions:
 - attr_list
 - nl2br

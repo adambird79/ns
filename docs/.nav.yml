@@ -1,0 +1,14 @@
+nav:
+    - Index.md
+    - Netsweeper-webadmin.md
+    - windows-build-clients.md
+    - Windows-AD.md
+    - Windows-Standalone.md
+    - Windows-intune.md
+    - Android.md
+    - Apple.md
+    - Chromebook.md
+    - SSl.md
+    - Firewall-config.md
+    - Troubleshooting.md
+    - Useful-links.md
