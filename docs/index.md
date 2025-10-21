@@ -47,8 +47,10 @@ hide:
 
 ### IOS Deployment
 
-Text here
+Deploy the SSL Certificate and "Client Filter" browser via the [MDM](Apple.md#mdm-guides)
 
 ### Chromebook Deployment
 
-Text here
+Deploy the [SSL Certificate](Chromebook.md#ssl-certificate)
+Deploy the [Wagent Extension](Chromebook.md#wagent)
+Deply the [Client Filter Extension](Chromebook.md#client-filter) (After or during Go-Live)
