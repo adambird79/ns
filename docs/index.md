@@ -13,7 +13,7 @@ hide:
 * Is a Directory Sync required? 
     * Is it an Intune / EntraID deployment - Create [EntraID Sync](Netsweeper-webadmin.md#entraid-sync-microsoft-graph)
     * Does the customer have Radius
-* If no additional complexity create groups in [Active Directory](Windows-AD.md#windows-active-directory-setup) and create matching groups in [Netsweeper](Netsweeper-webadmin.md#groups-policies)
+* If no additional complexity create groups in [Active Directory](Windows-AD.md#create-filtering-groups) and create matching groups in [Netsweeper](Netsweeper-webadmin.md#groups-policies)
 * Add [Client IP Range(s)](Netsweeper-webadmin.md#clients)
 * Create [wagent config](Netsweeper-webadmin.md#wagent)
 * Create [Client Filter Config](Netsweeper-webadmin.md#client-filer-onguard)
@@ -22,9 +22,9 @@ hide:
 
 ### Windows Pre-Deployment
 
-* Create the MST file for the [wagent](Windows-AD.md#wagent-build-mst)
-* Create the MST file for the [Client Filter](Windows-AD.md#clinet-filter-build-mst)
-* Deploy the SSL certificate
+* Create the MST file for the [wagent](windows-build-clients.md#wagent-build-mst)
+* Create the MST file for the [Client Filter](windows-build-clients.md#client-filter-build-mst)
+* Deploy the [SSL certificate](Windows-AD.md#deploying-ssl-certificate)
 !!! Warning "Warning"
     If we are moving from Netsweeper to Netsweeper the wagent and client filter should deployed during the switchover
 * Create the [wagent GPO](Windows-AD.md#deploy-the-wagent) only if not using **Netsweeper** already

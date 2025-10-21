@@ -18,6 +18,10 @@ Where a MDM is not in-place we can only install the SSL certificate and enable f
 !!! Warning "MDM"
     A MDM Solution is required to use the Client Filter on IOS
 
+For the IOS replacement "Clint Filter" browser the device must be running IOS 14.0 or later
+
+![ios](media/apple/ios.png)
+
 ## MDM Guides
 
 ### Intune
