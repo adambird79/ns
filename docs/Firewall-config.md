@@ -111,6 +111,23 @@ Here is the GUI setup, this shows TCP 443 for the others change the Protocol and
 
 ![fg-policy-route](media/firewalls/fortigate/fg-policy-route1.png)
 
+### Firewall Service
+In the GUI
+
+Select "Policy & Object" -> "Services" and click "+ Create new"
+
+![fg-service1](media/firewalls/fortigate/fg-service1.png)
+
+In the CLI
+
+``` bash
+config firewall service custom
+edit onGuard
+set tcp-portrange 3431-3432
+next
+end
+```
+
 ### Firewall Policy
 
 We need at least 2 policies creating, the first is to disable QUIC TCP/UDP 80 & 443 this should really already be implemented. The second rule is to allow HTTP(S) traffic from LAN to “toNetsweeper” with NAT disabled.
