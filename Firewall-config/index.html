@@ -523,6 +523,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#firewall-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Firewall Service
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#firewall-policy" class="md-nav__link">
     <span class="md-ellipsis">
       Firewall Policy
@@ -666,6 +675,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#firewall-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Firewall Service
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#firewall-policy" class="md-nav__link">
     <span class="md-ellipsis">
       Firewall Policy
@@ -791,6 +809,17 @@ end
 </code></pre></div><br />
 Here is the GUI setup, this shows TCP 443 for the others change the Protocol and Destination Ports</p>
 <p><img alt="fg-policy-route" src="../media/firewalls/fortigate/fg-policy-route1.png" /></p>
+<h3 id="firewall-service">Firewall Service</h3>
+<p>In the GUI</p>
+<p>Select "Policy &amp; Object" -&gt; "Services" and click "+ Create new"</p>
+<p><img alt="fg-service1" src="../media/firewalls/fortigate/fg-service1.png" /></p>
+<p>In the CLI</p>
+<div class="highlight"><pre><span></span><code>config<span class="w"> </span>firewall<span class="w"> </span>service<span class="w"> </span>custom
+edit<span class="w"> </span>onGuard
+<span class="nb">set</span><span class="w"> </span>tcp-portrange<span class="w"> </span><span class="m">3431</span>-3432
+next
+end
+</code></pre></div>
 <h3 id="firewall-policy">Firewall Policy</h3>
 <p>We need at least 2 policies creating, the first is to disable QUIC TCP/UDP 80 &amp; 443 this should really already be implemented. The second rule is to allow HTTP(S) traffic from LAN to “toNetsweeper” with NAT disabled.</p>
 <p>My preference for this rule would be to split this out per VLAN so egress traffic can be monitored per VLAN</p>
