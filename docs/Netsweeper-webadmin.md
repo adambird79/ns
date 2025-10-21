@@ -136,17 +136,120 @@ Change password on login – tick this box
 
 Once the user is created you can then go back in and select the “Groups” tab and assign to any groups the user should see.
 
-## Wagent
+## Tools
 
-## Client Filer (onGuard)
+### Wagent
+
+Under “Tools” -> “Agent” click the “+”
+Configuration Name - this should be the schools DFE Code
+Comments – should be the school name
+Client Settings:
+Cleanup All Expired IP Addresses - should be ticked
+Expire Clients on Logout – should be ticked
+Max Login Sessions – this should be set to 5 or 10 but never unlimited
+Append to User Name – this should be the schools DFE Code e.g. 123-4567
+Group Settings:
+Append to Group – should be the schools DFE Code e.g. 123-4567
+Client Default Groups – should be pupil group e.g. nsw_pupil@123-4567
+
+![ns-wag1](media/netsweeper-webadmin/ns-wag1.png)
+
+### Client Filer (onGuard)
+
+Client Filters are used for the onGuard monitoring, setting these up as per the below
+Under "Tools" -> "Client Filter Settings" click the "+"
+
+![ns-cf1](media/netsweeper-webadmin/ns-cf1.png)
+
+On the next screen, we need to complete the following:
+
+* Name
+* Restrict to Platform – if this is the first Client Filter for a school then leave as “All Platforms” if not then set as required
+* Description – make sure this has the School name and DFE as a minimum
+
+![ns-cf2](media/netsweeper-webadmin/ns-cf2.png)
+
+Click Submit and then go into Settings.
+
+* "Liger First Time Login Redirect" should be set to **"RUS no Profile"**
+* "Local Network Detection Network" should be with the following (Where 123.123.123.123 is the external IP address)
+``` text
+0.0.0.0 rus
+123.123.123.123 allow
+```
+* "Request Context IP Address" this can be found under "Administration" -> "Services" but should be supplied by Netsweeper Support
+* "nFilter Config" in most cases this will be blank
+* "nMonitor Config" should be in most cases the below:
+``` text
+--webadmin=https://wavenetcloud.netsweeper.com/webadmin/ --log=1 --ocr_disabled=0 --ocr_image_compare_disabled=0 --ocr_matched_category_compare=0 --ocr_disable_words_compare=0 --ocr_disable_input_compare=0 --ocr_timeout_recapture=5 --keylog_disabled=0 --keylog_buffer_size=1024 --keylog_timeout_send=1 --keylog_timeout_clear=30 --image_quality=50 --image_target_width=0 --image_target_height=0 --tray_disabled=0 --tray_menu_disabled=0
+```
+* "nUpdate Config" should in most cases be blank, but to force a Client Filter update from Netsweeper
+``` text
+--enabled=1 --url=https://upgradecf.netsweeper.com/clientfilter/netsweeper/untested/Netsweeper%20Client%20Filter%20-%2013.10.55.55%20win64.json --log=3
+```
+
+### Directory Sync
+
+The directory sync on the Hosted Netsweeper should only be used in more complex deployments such as sites that use EntraID, Google or where something like Radius is used on-site for BYOD authentication
+
+#### Active Directory Sync
+
+To add a Directory Sync go to “Tools” -> “Directory Sync” and client the “+”
+
+![ns-adsync1](media/netsweeper-webadmin/ns-adsync1.png)
+
+On the next screen complete the “Search Base Name” usually we use the DFE code and school name and tick the “Enable Directory Sync Service” checkbox and click submit, this then puts you back at the Directory Sync main page, search for the newly created Directory Sync and click the “Search Base” to edit.
+
+On this page we need to select the Directory Type, this is usually “Windows Active Directory”, the “Connection String” should be the account DistinguishedName, “Password” is the account password and “Search Base” should be the location of the groups, this can be set as the root of the domain. Next we set the Append Group and Append Client these are both to be the school DFE Code, “Clone from Template” can be set to a template usually we opt for “Wavenet Template”. The “Managers” only needs completing when a 3rd party will be managing.
+
+![ns-adsync2](media/netsweeper-webadmin/ns-adsync2.png)
+
+Servers is Domain Controller, when you click Add server enter the IP of the server this will mostly be the external IP of the customer with a port forward, but in some cases this will be the internal address depending how we present to Netsweeper, once the IP is entered you can click “Test Connection” and test the link
+
+![ns-adsync3](media/netsweeper-webadmin/ns-adsync3.png)
+![ns-adsync4](media/netsweeper-webadmin/ns-adsync4.png)
+
+The Prefix should be set to “nsw_” this is to identify the filtering groups we created in Active Directory.
+
+To Force a Sync with Active Directory click “Sync Options” at the top right and then click “Run a Complete SYNC”
+
+![ns-adsync5](media/netsweeper-webadmin/ns-adsync5.png)
+
+#### EntraID Sync (Microsoft Graph)
+
+Follow this [Netsweeper guide](https://helpdesk.netsweeper.com/docs/8_2_Docs/8_2_Netsweeper_Docs/Content/Tools/Directory_Sync/Azure_Directory_Sync/Microsoft_Graph_Directory.htm?Highlight=entra){:target="_blank"} to setup the EntraID sync
+
+### Category Lookup
+
+The Category Lookup can be used to identify which categories a site belongs to
+
+![ns-catl1](media/netsweeper-webadmin/ns-catl1.png)
+
+### Trace Request
+
+The Trace Request screen allows us to trace a URL through the Netsweeper system, the following shows the options, we need to complete any one of “Client Name”, Client IP Address”, “Group Name” or “Policy Name” in the top half and then “URL” or “Destination IP Address" in the second half.
+
+The “Show all Steps” should also be selected to show all the steps taken
+
+![ns-tr1](media/netsweeper-webadmin/ns-tr1.png)
+
+This is an example of a completed trace request showing all the steps for the site 888.com
+
+![ns-tr2](media/netsweeper-webadmin/ns-tr2.png)
+
+![ns-tr3](media/netsweeper-webadmin/ns-tr3.png)
 
 ## Reports
 
-## Users
+## Logs
 
+### Directory Sync Logs
 
-## Directory Sync
-### Active Directory Sync
+The Directory Sync Logs can be useful in diagnosing issues with the "Directory Sync" for testing you should change the Directory Sync "Log Level" to "Debug"
 
-### EntraID Sync (Microsoft Graph)
-Follow this [Netsweeper guide](https://helpdesk.netsweeper.com/docs/8_2_Docs/8_2_Netsweeper_Docs/Content/Tools/Directory_Sync/Azure_Directory_Sync/Microsoft_Graph_Directory.htm?Highlight=entra){:target="_blank"} to setup the EntraID sync
+!!! Note "Log Level"
+    Remember to set this back to "INFO" once issue is resolved.
+
+### Request Logs
+
+This is possibly the best troubleshooting feature we have access to where the traffic can be monitored, you will only see the logs for the groups / Networks you have permissions for.

@@ -18,7 +18,7 @@ hide:
 * Create [wagent config](Netsweeper-webadmin.md#wagent)
 * Create [Client Filter Config](Netsweeper-webadmin.md#client-filer-onguard)
 * Create [Reports](Netsweeper-webadmin.md#reports)
-* Create [User Accounts](Netsweeper-webadmin.md#users) for onGuard
+* Create [User Accounts](Netsweeper-webadmin.md#acounts) for onGuard
 
 ### Windows Pre-Deployment
 
@@ -40,7 +40,7 @@ hide:
 
 ### Windows Deployment
 
-* Deploy the wagent [wagent](Windows-AD.md#deploy-the-wagent)
+* Deploy the wagent [wagent](Windows-AD.md#deploy-the-wagent) (If not already deployed)
 * Test the Filtering
 * Deploy the Client Filter [Client Filter GPO](Windows-AD.md#deploy-the-client-filter)
 * Test the Monitoring
