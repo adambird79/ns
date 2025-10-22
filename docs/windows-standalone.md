@@ -18,7 +18,7 @@ Download the SSL Certificate:
 
 ![win-sa6](media/windows-sa/win-sa6.png)
 
-## Manaul wagent Installation
+## Manual wagent Installation
 
 open a command prompt with Administrator privileges, this must be CMD and not Powershell.
 
