@@ -31,11 +31,11 @@ Ideally any Android devices would need to be on a separate VLAN due to not inspe
 
 In Intune click "Devices" -> "By Platform" -> "Android" -> "Configuration"
 
-[android-ssl1](media/android/android-ssl1.png)
+![android-ssl1](media/android/android-ssl1.png)
 
 Select "+ Create" -> "New Policy"
 
-[android-ssl2](media/android/android-ssl2.png)
+![android-ssl2](media/android/android-ssl2.png)
 
 Select the following:
 
@@ -43,19 +43,19 @@ Plaform = Android Enterprise
 Profile Type = Templates
 Template Name = Trusted Certificate
 
-[android-ssl3](media/android/android-ssl3.png)
+![android-ssl3](media/android/android-ssl3.png)
 
 Give the configuration a name
 
-[android-ssl4](media/android/android-ssl4.png)
+![android-ssl4](media/android/android-ssl4.png)
 
 Browse to the SSL certificate
 
-[android-ssl5](media/android/android-ssl5.png)
+![android-ssl5](media/android/android-ssl5.png)
 
 On the next screen assign this to a group or all devices
 
-[android-ssl6](media/android/android-ssl6.png)
+![android-ssl6](media/android/android-ssl6.png)
 
 Now on the last screen click "Create" and the configuration should appear within a couple of minutes.
 
