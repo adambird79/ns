@@ -14,19 +14,52 @@ tags:
     A MDM Solution is required to use the Client Filter on Android
 
 ## Limitations
-Android devices require a connection to www.google.com to verify internet connectivity, so an Android device going through Netsweeper will report that it has no internet connection
+Android devices require a connection to [www.google.com](https://www.google.com){:target="_blank"}  to verify internet connectivity, so an Android device going through Netsweeper will report that it has no internet connection
 
-The Netsweeper workaround is to add a new CNAME record on your local DNS server for your local Google domain(s) that points to forcesafesearch.google.com
+The Netsweeper workaround is to add a new CNAME record on your local DNS server for your [local Google domain(s)](https://www.google.com/supported_domains){:target="_blank"} that points to **forcesafesearch.google.com**
 
 Ideally any Android devices would need to be on a separate VLAN due to not inspecting the Google traffic.
 
-## Client Filter
-
-The Netsweeper Clinet Filter is a browseer replacementm. To install the client filter on an Android device this needs to enrolled into a MDM solution, otherwise this would provide filtering only
+!!! Warning "MDM Required for Client Filter"
+    The Netsweeper Clinet Filter is a browseer replacement. To install the client filter on an Android device this needs to enrolled into a MDM solution, otherwise we can only provide filtering.
 
 ## MDM Guides
 
 ### Intune
+
+#### SSL Certificate
+
+In Intune click "Devices" -> "By Platform" -> "Android" -> "Configuration"
+
+[android-ssl1](media/android/android-ssl1.png)
+
+Select "+ Create" -> "New Policy"
+
+[android-ssl2](media/android/android-ssl2.png)
+
+Select the following:
+
+Plaform = Android Enterprise
+Profile Type = Templates
+Template Name = Trusted Certificate
+
+[android-ssl3](media/android/android-ssl3.png)
+
+Give the configuration a name
+
+[android-ssl4](media/android/android-ssl4.png)
+
+Browse to the SSL certificate
+
+[android-ssl5](media/android/android-ssl5.png)
+
+On the next screen assign this to a group or all devices
+
+[android-ssl6](media/android/android-ssl6.png)
+
+Now on the last screen click "Create" and the configuration should appear within a couple of minutes.
+
+#### Client Filter
 
 This guide assumes Android devices are already enrolled and a Managed Google Play has been linked
 
@@ -53,8 +86,6 @@ The ConfigEdit value should be a "string" with the configuration value
 ```
 
 the {{partialupn}} is a Intune variable which returns the username
-
-#### SSL Certificate
 
 ## Connecting to a Wireless Network
 
