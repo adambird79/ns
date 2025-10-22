@@ -21,7 +21,7 @@ The Netsweeper workaround is to add a new CNAME record on your local DNS server 
 Ideally any Android devices would need to be on a separate VLAN due to not inspecting the Google traffic.
 
 !!! Warning "MDM Required for Client Filter"
-    The Netsweeper Clinet Filter is a browseer replacement. To install the client filter on an Android device this needs to enrolled into a MDM solution, otherwise we can only provide filtering.
+    The Netsweeper Clinet Filter is a browser replacement. To install the client filter on an Android device this needs to enrolled into a MDM solution, otherwise we can only provide filtering.
 
 ## MDM Guides
 
