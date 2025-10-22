@@ -9,6 +9,7 @@ nav:
     - Apple.md
     - Chromebook.md
     - SSl.md
+    - dns.md
     - Firewall-config.md
     - Troubleshooting.md
     - Useful-links.md
