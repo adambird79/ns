@@ -1,5 +1,7 @@
 site_name: Netsweeper Docs
 site_description: Netsweeper guides
+site_url: https://ns-wki.eduhost.org.uk
+site_author: Adam Bird
 theme:
   name: material
   palette:

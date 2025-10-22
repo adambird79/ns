@@ -5,7 +5,7 @@ Netsweeper instance status
 
 <https://status.netsweeper.com>
 
-Netswepeer – Getting Starter
+Netswepeer – Getting Started 
 
 <https://helpdesk.netsweeper.com/docs/8_2_Docs/8_2_Getting_Started/Content/Getting_Started/8_2_Getting_Started.htm>
 
