@@ -40,13 +40,20 @@ On the left select "Property" and we need to update the following lines CONFIGED
 ![orca-cf2](media/windows-clients/orca-cf2.png)
 
 CONFIGEDIT
+
+If Windows AD Joined:
 ``` bash
--p filter.wavenetcloud.netsweeper.com:3431 -y {BRAND_NAME} -f 923649 -i nsw -d {DFE-CODE} -c -s
+-p filter.wavenetcloud.netsweeper.com:3431 -y {BRAND_NAME} -f 923905 -i nsw -d {DFE-CODE} -a {DFE-CODE} -A {DFE-CODE} -c -s
+```
+
+If EntraID Joined: 
+``` bash
+-p filter.wavenetcloud.netsweeper.com:3431 -y {BRAND_NAME} -f 989441 -i nsw -d {DFE-CODE} -a {DFE-CODE} -A {DFE-CODE} -c -s
 ```
 
 NMONITOR_CONFIG
 ``` bash
---webadmin=https://wavenetcloud.netsweeper.com/webadmin/ --log=0 --ocr_disabled=0 --ocr_image_compare_disabled=0 --ocr_matched_category_compare=1 --ocr_disable_words_compare=0 --ocr_disable_input_compare=0 --ocr_timeout_recapture=5 --keylog_disabled=0 --keylog_buffer_size=1024 --keylog_timeout_send=1 --keylog_timeout_clear=30 --image_quality=50 --image_target_width=0 --image_target_height=0 --tray_disabled=0 --tray_menu_disabled=0
+--webadmin=https://wavenetcloud.netsweeper.com/webadmin/ --log=1 --ocr_disabled=0 --ocr_image_compare_disabled=0 --ocr_matched_category_compare=1 --ocr_disable_words_compare=0 --ocr_disable_input_compare=0 --ocr_timeout_recapture=5 --keylog_disabled=0 --keylog_buffer_size=1024 --keylog_timeout_send=1 --keylog_timeout_clear=30 --image_quality=50 --image_target_width=0 --image_target_height=0 --tray_disabled=0 --tray_menu_disabled=0
 ```
 
 NUPDATE_ENABLED
