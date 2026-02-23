@@ -1019,8 +1019,9 @@ Notice LightspeedMDM requires the DFE code on the "-n" as well as the "-d" optio
 <p>The Wavenet Helpdesk will generate the MACOS Wagent and Client Filter configurations for the below.</p>
 <h3 id="ssl-installation">SSL Installation</h3>
 <p><a href="https://wavenetcloud.netsweeper.com/webadmin/tools/download_proxy_cert.php">SSL Proxy Certificate</a></p>
-<p>Set the permissions on the SSL certificate as below:</p>
+<p>Open "Keychain Access" and under "System" set the permissions on the SSL certificate as below:</p>
 <p><img alt="macos-ssl1" src="../media/apple/macos-ssl1.png" /></p>
+<p><img alt="macos-ssl1" src="../media/apple/macos-ssl2.png" /></p>
 <h3 id="wagent">WAGENT</h3>
 <p>Download the latest <a href="https://repo.netsweeper.com/clientfilter/netsweeper/wagent/Netsweeper%20Workstation%20Agent%20-%204.50.54.54-mac.pkg">WAgent v4.50.54.54</a></p>
 <p>Install the WAgent package, this can be installed in the same way any other MacOS app is installed. Double Click the pkg file and follow the onscreen instructions.</p>
@@ -1033,6 +1034,47 @@ Notice LightspeedMDM requires the DFE code on the "-n" as well as the "-d" optio
 </span></code></pre></div>
 <p>Once this file is copied into place you should restart the Macbook.</p>
 <h3 id="client-filter">Client Filter</h3>
+<p>Download the lastest GA Client Filter currently <a href="https://repo.netsweeper.com/clientfilter/netsweeper/mac/Netsweeper%20Client%20Filter%20-%2012.60.55.55%20universal.pkg">Client Filter v12.60.55.55</a></p>
+<p>Install the WAgent package, this can be installed in the same way any other MacOS app is installed. Double Click the pkg file and follow the onscreen instructions.</p>
+<p><img alt="macos-cf1" src="../media/apple/macos-cf1.png" /></p>
+<p><img alt="macos-cf2" src="../media/apple/macos-cf2.png" /></p>
+<p><img alt="macos-cf3" src="../media/apple/macos-cf3.png" /></p>
+<p><img alt="macos-cf4" src="../media/apple/macos-cf4.png" /></p>
+<p><img alt="macos-cf5" src="../media/apple/macos-cf5.png" /></p>
+<p>Change the policy server URL to:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>filter.wavenetcloud.netsweeper.com:3431
+</span></code></pre></div>
+<p><img alt="macos-cf6" src="../media/apple/macos-cf6.png" /></p>
+<p>On this next screen, set the "Webadmin URL to:<br />
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>https://wavenetcloud.netsweeper.com/webadmin/
+</span></code></pre></div></p>
+<p><img alt="macos-cf7" src="../media/apple/macos-cf7.png" /></p>
+<p><img alt="macos-cf8" src="../media/apple/macos-cf8.png" /></p>
+<p>Allow the "Netsweeper Client Filter (tpfilter)"</p>
+<p><img alt="macos-cf9" src="../media/apple/macos-cf9.png" /></p>
+<p><img alt="macos-cf10" src="../media/apple/macos-cf10.png" /></p>
+<p>Now in the tray at the top right click the Netsweeper icon and select "Settings"</p>
+<p><img alt="macos-cf11" src="../media/apple/macos-cf11.png" /></p>
+<p>And then select "Filter Settings" on the next screen</p>
+<p><img alt="macos-cf12" src="../media/apple/macos-cf12.png" /></p>
+<p>On this screen we will need to set the following items, these can be provided by the Wavenet Helpdesk</p>
+<ul>
+<li>Company/Brand</li>
+<li>
+<p>Select the approriate "Filtering Flags"</p>
+<ul>
+<li>Fail Closed</li>
+<li>Enable HTTPS Filtering</li>
+<li>AV/VPN Compatability Mode</li>
+</ul>
+</li>
+<li>
+<p>User Append</p>
+</li>
+<li>Group Append</li>
+<li>Group</li>
+</ul>
+<p><img alt="macos-cf13" src="../media/apple/macos-cf13.png" /></p>
 
 
 
