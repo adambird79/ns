@@ -1104,17 +1104,17 @@ Under "Tools" -&gt; "Client Filter Settings" click the "+"</p>
 <ul>
 <li>"Liger First Time Login Redirect" should be set to <strong>"RUS no Profile"</strong></li>
 <li>"Local Network Detection Network" should be with the following (Where 123.123.123.123 is the external IP address)<br />
-<div class="highlight"><pre><span></span><code>0.0.0.0 rus
-123.123.123.123 allow
-</code></pre></div></li>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>0.0.0.0 rus
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>123.123.123.123 allow
+</span></code></pre></div></li>
 <li>"Request Context IP Address" this can be found under "Administration" -&gt; "Services" but should be supplied by Netsweeper Support</li>
 <li>"nFilter Config" in most cases this will be blank</li>
 <li>"nMonitor Config" should be in most cases the below:<br />
-<div class="highlight"><pre><span></span><code>--webadmin=https://wavenetcloud.netsweeper.com/webadmin/ --log=1 --ocr_disabled=0 --ocr_image_compare_disabled=0 --ocr_matched_category_compare=0 --ocr_disable_words_compare=0 --ocr_disable_input_compare=0 --ocr_timeout_recapture=5 --keylog_disabled=0 --keylog_buffer_size=1024 --keylog_timeout_send=1 --keylog_timeout_clear=30 --image_quality=50 --image_target_width=0 --image_target_height=0 --tray_disabled=0 --tray_menu_disabled=0
-</code></pre></div></li>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>--webadmin=https://wavenetcloud.netsweeper.com/webadmin/ --log=1 --ocr_disabled=0 --ocr_image_compare_disabled=0 --ocr_matched_category_compare=0 --ocr_disable_words_compare=0 --ocr_disable_input_compare=0 --ocr_timeout_recapture=5 --keylog_disabled=0 --keylog_buffer_size=1024 --keylog_timeout_send=1 --keylog_timeout_clear=30 --image_quality=50 --image_target_width=0 --image_target_height=0 --tray_disabled=0 --tray_menu_disabled=0
+</span></code></pre></div></li>
 <li>"nUpdate Config" should in most cases be blank, but to force a Client Filter update from Netsweeper<br />
-<div class="highlight"><pre><span></span><code>--enabled=1 --url=https://upgradecf.netsweeper.com/clientfilter/netsweeper/untested/Netsweeper%20Client%20Filter%20-%2013.10.55.55%20win64.json --log=3
-</code></pre></div></li>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>--enabled=1 --url=https://upgradecf.netsweeper.com/clientfilter/netsweeper/untested/Netsweeper%20Client%20Filter%20-%2013.10.55.55%20win64.json --log=3
+</span></code></pre></div></li>
 </ul>
 <h3 id="directory-sync">Directory Sync</h3>
 <p>The directory sync on the Hosted Netsweeper should only be used in more complex deployments such as sites that use EntraID, Google or where something like Radius is used on-site for BYOD authentication</p>
@@ -1201,7 +1201,7 @@ Under "Tools" -&gt; "Client Filter Settings" click the "+"</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.60a45f97.min.js"></script>

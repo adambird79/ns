@@ -149,9 +149,11 @@ The Wavenet Helpdesk will generate the MACOS Wagent and Client Filter configurat
 
 [SSL Proxy Certificate](https://wavenetcloud.netsweeper.com/webadmin/tools/download_proxy_cert.php)
 
-Set the permissions on the SSL certificate as below:
+Open "Keychain Access" and under "System" set the permissions on the SSL certificate as below:
 
 ![macos-ssl1](media/apple/macos-ssl1.png)
+
+![macos-ssl1](media/apple/macos-ssl2.png)
 
 
 ### WAGENT
@@ -178,4 +180,62 @@ Once this file is copied into place you should restart the Macbook.
  
 ### Client Filter
 
+Download the lastest GA Client Filter currently [Client Filter v12.60.55.55](https://repo.netsweeper.com/clientfilter/netsweeper/mac/Netsweeper%20Client%20Filter%20-%2012.60.55.55%20universal.pkg)
 
+Install the WAgent package, this can be installed in the same way any other MacOS app is installed. Double Click the pkg file and follow the onscreen instructions.
+
+![macos-cf1](media/apple/macos-cf1.png)
+
+![macos-cf2](media/apple/macos-cf2.png)
+
+![macos-cf3](media/apple/macos-cf3.png)
+
+![macos-cf4](media/apple/macos-cf4.png)
+
+![macos-cf5](media/apple/macos-cf5.png)
+
+Change the policy server URL to:
+
+``` text
+filter.wavenetcloud.netsweeper.com:3431
+```
+
+![macos-cf6](media/apple/macos-cf6.png)
+
+On this next screen, set the "Webadmin URL to:
+``` text
+https://wavenetcloud.netsweeper.com/webadmin/
+```
+
+![macos-cf7](media/apple/macos-cf7.png)
+
+![macos-cf8](media/apple/macos-cf8.png)
+
+Allow the "Netsweeper Client Filter (tpfilter)"
+
+![macos-cf9](media/apple/macos-cf9.png)
+
+![macos-cf10](media/apple/macos-cf10.png)
+
+Now in the tray at the top right click the Netsweeper icon and select "Settings"
+
+![macos-cf11](media/apple/macos-cf11.png)
+
+And then select "Filter Settings" on the next screen
+
+![macos-cf12](media/apple/macos-cf12.png)
+
+On this screen we will need to set the following items, these can be provided by the Wavenet Helpdesk
+
+* Company/Brand
+* Select the approriate "Filtering Flags"
+
+    * Fail Closed
+    * Enable HTTPS Filtering
+    * AV/VPN Compatability Mode
+
+* User Append
+* Group Append
+* Group
+
+![macos-cf13](media/apple/macos-cf13.png)
