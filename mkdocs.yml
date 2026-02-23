@@ -20,6 +20,8 @@ theme:
       name: Light Mode
     primary: blue
     accent: green
+  features:
+    - content.code.copy
 plugins:
   - search
   - callouts
@@ -31,5 +33,11 @@ markdown_extensions:
 - admonition
 - pymdownx.details
 - pymdownx.superfences
+- pymdownx.highlight:
+    anchor_linenums: true
+    line_spans: __span
+    pygments_lang_class: true
+- pymdownx.inlinehilite
+- pymdownx.snippets
 extra_css:
   - stylesheets/extra.css

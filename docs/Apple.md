@@ -1,6 +1,7 @@
 ---
 date:
     create: 2025-10-17
+    modified: 2026-02-23
 tags:
     - Apple
     - IOS
@@ -9,11 +10,13 @@ tags:
 ---
 # Apple
 
+## IOS
+
 The nMonitor app should be purchased from the MDM (this is free). nMonitor is a replacement browser and to ensure monitoring is effective any other browsers should be disabled via the MDM
 
 Where a MDM is not in-place we can only install the SSL certificate and enable filtering on the devices, note this would be a manual process adding time to the project.
 
-## Requirements
+### Requirements
 
 !!! Warning "MDM"
     A MDM Solution is required to use the Client Filter on IOS
@@ -22,13 +25,13 @@ For the IOS replacement "Clint Filter" browser the device must be running IOS 14
 
 ![ios](media/apple/ios.png)
 
-## MDM Guides
+### MDM Guides
 
-### Intune
+#### Intune
 
-#### SSL Certificate
+##### SSL Certificate
 
-#### Clint Filter (Replacement Browser)
+##### Clint Filter (Replacement Browser)
 To setup Microsoft Endpoint Manager for you will need to have the client filter plist files prepared already.
 
 Login to: [Intune Admin](https://intune.microsoft.com){:target="_blank"} 
@@ -97,7 +100,7 @@ netsweeper_brand -f 958209 -n {{username}} -d DFE-CODE -g nsw_pupil@DFE-CODE -a 
 </plist\>
 ```
 
-### Moysle
+#### Moysle
 
 ``` xml
 <dict>
@@ -107,9 +110,9 @@ netsweeper_brand -f 958209 -n {{username}} -d DFE-CODE -g nsw_pupil@DFE-CODE -a 
 ```
 In Mosyle the available variables are shown when you go to create the app configuration, the most useful will be %DeviceName% (make sure no spaces in the name) and %SerialNumber%
 
-### JAMF
+#### JAMF
 
-### Lightspeed
+#### Lightspeed
 
 ``` xml
 <?xml version="1.0" encoding="UTF-8"?\>
@@ -132,8 +135,47 @@ netsweeper_brand -f 958209 -n %devicename%@123-4567 -d 123-4567 -g nsw_pupil\</s
 ```
 Notice LightspeedMDM requires the DFE code on the "-n" as well as the "-d" options, also note that device names will not show correctly if they have a space in the name.
 
-### Meraki
+#### Meraki
 
-## Manual SSL Installation
+### IOS Manual SSL Installation
 
 To manually install the SSL Certificate see Apple support: [Trust manually installed certificate](https://support.apple.com/en-us/102390){:target="_blank"}
+
+## MACOS (Manual Installation)
+
+The Wavenet Helpdesk will generate the MACOS Wagent and Client Filter configurations for the below.
+
+### SSL Installation
+
+[SSL Proxy Certificate](https://wavenetcloud.netsweeper.com/webadmin/tools/download_proxy_cert.php)
+
+Set the permissions on the SSL certificate as below:
+
+![macos-ssl1](media/apple/macos-ssl1.png)
+
+
+### WAGENT
+
+Download the latest [WAgent v4.50.54.54](https://repo.netsweeper.com/clientfilter/netsweeper/wagent/Netsweeper%20Workstation%20Agent%20-%204.50.54.54-mac.pkg)
+
+Install the WAgent package, this can be installed in the same way any other MacOS app is installed. Double Click the pkg file and follow the onscreen instructions.
+
+![macos-wagent1](media/apple/macos-wagent1.png)
+
+![macos-wagent2](media/apple/macos-wagent2.png)
+
+![macos-wagent3](media/apple/macos-wagent3.png)
+
+![macos-wagent4](media/apple/macos-wagent4.png)
+
+Witht the com.netsweeper.wagent.plist supplied by the Wavenet Helpdesk, copy “com.netsweeper.wagent.plist” to “/Library/LaunchAgents/com.netsweeper.wagent.plist” you can use the terminal and the command 
+
+``` zsh
+sudo cp com.netsweeper.wagent.plist /Library/LaunchAgents/com.netsweeper.wagent.plist
+```
+
+Once this file is copied into place you should restart the Macbook.
+ 
+### Client Filter
+
+
