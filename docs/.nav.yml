@@ -5,6 +5,7 @@ nav:
     - Windows-AD.md
     - Windows-Standalone.md
     - Windows-intune.md
+    - Windows-client-filter.md
     - Android.md
     - Apple.md
     - Chromebook.md
